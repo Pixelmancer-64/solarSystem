@@ -16,12 +16,12 @@ renderer.render(scene, camera);
 
 camera.position.setX(10);
 
-const bgTexture = new THREE.TextureLoader().load('8k_stars_milky_way.jpg');
+const bgTexture = new THREE.TextureLoader().load('/imgs/8k_stars_milky_way.jpg');
 scene.background = bgTexture;
 
 class Planet{
   constructor(map, scale, vel, r){
-    this.planetMap = new THREE.TextureLoader().load(map);
+    this.planetMap = new THREE.TextureLoader().load('/imgs/' + map);
     this.geometry = new THREE.SphereGeometry(scale*1000 / 2, 32, 32);
     this.material = new THREE.MeshBasicMaterial( { map: this.planetMap,});
     this.planet = new THREE.Mesh(this.geometry, this.material);
