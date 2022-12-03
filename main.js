@@ -1,7 +1,5 @@
 import './style.css'
-
 import * as THREE from 'three';
-
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 const scene = new THREE.Scene();
@@ -57,8 +55,6 @@ const mercury = new Planet('8k_mercury.jpg', .00003, 1.607, .39 + 10);
 const sun = new Planet('8k_sun.jpg', 0.0093, 0, 0);
 
 earth.attach(moon.planet);
-
-
 
 let planets = [neptune, uranus, saturn, jupiter, mars, earth, venus, mercury];
 
